@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bkg: rgb(255 255 255);
+    --color-text: rgb(0 0 0);
+    --color-element: hsl(0, 0%, 100%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bkg: rgb(32, 44, 55);
+      --color-text: rgb(255 255 255);
+      --color-element: rgb(43, 57, 69);
+    }
+  }
+
+  [data-theme="dark"] {
+    --color-bkg: rgb(32, 44, 55);
+    --color-text: rgb(255 255 255);
+    --color-element: rgb(43, 57, 69);
+  }
+
+  [data-theme="light"] {
+    --color-bkg: rgb(255 255 255);
+    --color-text: rgb(0 0 0);
+    --color-element: hsl(0, 0%, 100%);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.45rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2f3349;
+  border-radius: 0.375rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3f4253;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #2f3349;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #f5f5f5;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #f2f2f2;
+}
+
+html {
+  overflow-x: hidden;
+}
